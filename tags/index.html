@@ -57,7 +57,7 @@
 <meta property="og:site_name" content="Just Do It">
 <meta property="og:description" content="你是否还在一步一个脚印的在坚定走着？ 即使心烦意乱希望渺茫">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T08:01:01.900Z">
+<meta property="og:updated_time" content="2019-11-25T09:21:26.857Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://wolfcoming.github.io/tags/">
@@ -216,6 +216,7 @@
 
           </div>
           
+    <div class="comments" id="comments"></div>
 
         </div>
           
@@ -371,6 +372,33 @@
   
 
   
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'Qml8edJbyyiAzBjGYI1rGs6d-gzGzoHsz',
+    appKey: '8EBvJwxFegW3BtSJdeqf36Lw',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
 
 </body>
 </html>

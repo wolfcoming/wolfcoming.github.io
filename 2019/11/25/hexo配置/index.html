@@ -57,7 +57,7 @@
 <meta property="og:site_name" content="Just Do It">
 <meta property="og:description" content="配置主题这里我选择使用next作为主题 gitHub地址1.下载代码  方式一：通过git下载 cd [站点文件夹] git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next 方式二：将github中代码复制到themes文件夹下面即可   2.修改根目录下_config.yml配置文件即可 1theme: hexo-t">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T08:14:40.024Z">
+<meta property="og:updated_time" content="2019-11-25T09:21:26.877Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://wolfcoming.github.io/2019/11/25/hexo%E9%85%8D%E7%BD%AE/">
@@ -197,7 +197,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-11-25 15:25:47 / Modified: 16:14:40" itemprop="dateCreated datePublished" datetime="2019-11-25T15:25:47+08:00">2019-11-25</time>
+              <time title="Created: 2019-11-25 15:25:47 / Modified: 17:21:26" itemprop="dateCreated datePublished" datetime="2019-11-25T15:25:47+08:00">2019-11-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,6 +219,20 @@
               <span class="post-meta-item-text">Views: </span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/11/25/hexo%E9%85%8D%E7%BD%AE/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/25/hexo%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -258,6 +272,19 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre>
 
 <p>3.给文章添加“tags”属性<br>打开需要添加标签的文章，为其添加tags属性。下方的tags:下方的- jQuery - 表格<br>              - 表单验证就是这篇文章的标签了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">categories: </span><br><span class="line">- 常用命令</span><br><span class="line">tags:</span><br><span class="line">- hexo</span><br><span class="line">- 常用命令</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="开启浏览量访问"><a href="#开启浏览量访问" class="headerlink" title="开启浏览量访问"></a>开启浏览量访问</h3><p>(这里只针对next主题而言，其他主题可能需要其他的一些配置)<br>在themes/_config.yml中开启busuanzi统计功能即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
+<h3 id="开通评论功能"><a href="#开通评论功能" class="headerlink" title="开通评论功能"></a>开通评论功能</h3><p>使用Valine 评论系统：这款系统不需要登录便可以登录，没有后端，Next 主题最新已经支持安装<br>建议使用最新版next</p>
+<p>1.在themes/_config.yml的配置文件中开启valine功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https://leancloud.cn</span><br><span class="line"># more info please open https://valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否开启</span><br><span class="line">  appid:   # 需要去leanclod官网创建应用</span><br><span class="line">  appkey:  # 需要去leanclod官网创建应用</span><br><span class="line">  notify: false # 新留言是否需要通知 https://github.com/xCss/Valine/wiki</span><br><span class="line">  verify: false # 是否需要验证，验证比较反人类建议false关闭</span><br><span class="line">  placeholder: 请在此输入您的留言 # 默认留言框内的文字</span><br><span class="line">  avatar: mm # 默认头像</span><br><span class="line">  guest_info: nick,mail # 默认留言框的头部需要访问者输入的信息</span><br><span class="line">  pageSize: 10 # pagination size #默认单页的留言条数</span><br></pre></td></tr></table></figure>
+
+<p>其中的appid和appkey需要去官网创建应用获得，地址如下：</p>
+<p><a href="https://leancloud.cn/dashboard/login.html#/signin" target="_blank" rel="noopener">LeanCloud官网登录入口</a></p>
+<p>创建应用，选择开发版，创建好之后就能获取到id和key复制到上一步即可<br>效果如下：</p>
+<p>2.关闭评论功能<br>    对于不想开启评论的文章，只需要添加comments字符设置为false即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout: markdown</span><br><span class="line">title: markdown常用命令</span><br><span class="line">date: 2019-11-25 15:43:13</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
 
 
     </div>
@@ -294,6 +321,7 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre>
 
           </div>
           
+    <div class="comments" id="comments"></div>
 
         </div>
           
@@ -318,7 +346,7 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置主题"><span class="nav-number">1.</span> <span class="nav-text">配置主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置分类"><span class="nav-number">2.</span> <span class="nav-text">设置分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加Tag"><span class="nav-number">3.</span> <span class="nav-text">添加Tag</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置主题"><span class="nav-number">1.</span> <span class="nav-text">配置主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置分类"><span class="nav-number">2.</span> <span class="nav-text">设置分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加Tag"><span class="nav-number">3.</span> <span class="nav-text">添加Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启浏览量访问"><span class="nav-number">4.</span> <span class="nav-text">开启浏览量访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开通评论功能"><span class="nav-number">5.</span> <span class="nav-text">开通评论功能</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -450,6 +478,33 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre>
   
 
   
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'Qml8edJbyyiAzBjGYI1rGs6d-gzGzoHsz',
+    appKey: '8EBvJwxFegW3BtSJdeqf36Lw',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
 
 </body>
 </html>
