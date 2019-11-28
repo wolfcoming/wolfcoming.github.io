@@ -50,30 +50,31 @@
   };
 </script>
 
-  <meta name="description" content="你是否还在一步一个脚印的在坚定走着？ 即使心烦意乱希望渺茫">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Just Do It">
-<meta property="og:url" content="http:&#x2F;&#x2F;wolfcoming.github.io&#x2F;index.html">
+  <meta name="description" content="dio框架的使用   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理 安装   pubspec.yaml文件的dev_dependencies下添加dio依赖即可   1dio: ^3.0.6 使用基础使用   最基本的使用是直接创建dio对象进行网络请求，这里以get方式进行举例。    请求的方式分两">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dio进阶使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;wolfcoming.github.io&#x2F;2019&#x2F;11&#x2F;28&#x2F;dio%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="Just Do It">
-<meta property="og:description" content="你是否还在一步一个脚印的在坚定走着？ 即使心烦意乱希望渺茫">
+<meta property="og:description" content="dio框架的使用   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理 安装   pubspec.yaml文件的dev_dependencies下添加dio依赖即可   1dio: ^3.0.6 使用基础使用   最基本的使用是直接创建dio对象进行网络请求，这里以get方式进行举例。    请求的方式分两">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-28T10:17:04.522Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://wolfcoming.github.io/">
+<link rel="canonical" href="http://wolfcoming.github.io/2019/11/28/dio%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Just Do It</title>
+  <title>dio进阶使用 | Just Do It</title>
   
 
 
@@ -169,105 +170,10 @@
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://wolfcoming.github.io/2019/11/28/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yq">
-      <meta itemprop="description" content="你是否还在一步一个脚印的在坚定走着？ 即使心烦意乱希望渺茫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Just Do It">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/28/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">hexo常用命令</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-28 18:17:04" itemprop="dateCreated datePublished" datetime="2019-11-28T18:17:04+08:00">2019-11-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index">
-                    <span itemprop="name">常用命令</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2019/11/28/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/28/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   
   
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="http://wolfcoming.github.io/2019/11/28/dio%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -281,8 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/28/dio%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">dio进阶使用</a>
+          dio进阶使用
         </h1>
 
         <div class="post-meta">
@@ -308,6 +213,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -332,7 +244,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="dio框架的使用"><a href="#dio框架的使用" class="headerlink" title="dio框架的使用"></a>dio框架的使用</h2><p>   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理</p>
+        <h2 id="dio框架的使用"><a href="#dio框架的使用" class="headerlink" title="dio框架的使用"></a>dio框架的使用</h2><p>   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>   pubspec.yaml文件的dev_dependencies下添加dio依赖即可<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dio: ^3.0.6</span><br></pre></td></tr></table></figure></p>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h4><p>   最基本的使用是直接创建dio对象进行网络请求，这里以get方式进行举例。</p>
 <p>   请求的方式分两种，</p>
@@ -431,231 +343,33 @@
 <h4 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">HttpUtil.post(</span><br><span class="line">        &quot;user/login&quot;,</span><br><span class="line">        params: &#123;&quot;username&quot;: username, &quot;password&quot;: password&#125;,</span><br><span class="line">        onStart: ()&#123;</span><br><span class="line">          print(&quot;开始请求&quot;);</span><br><span class="line">        &#125;,</span><br><span class="line">        success: (result)&#123;</span><br><span class="line">          print(&quot;请求结果：$result&quot;);</span><br><span class="line">        &#125;,</span><br><span class="line">        error: (msg)&#123;</span><br><span class="line">          print(&quot;错误信息：$msg&quot;);</span><br><span class="line">        &#125;,</span><br><span class="line">        complete: ()&#123;</span><br><span class="line">          print(&quot;请求结束&quot;);</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
 <p>   不得不说方法作为参数传递能带来很多便利啊，现在新出的语言好像大都支持了这种特性。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://wolfcoming.github.io/2019/11/25/Markdown%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yq">
-      <meta itemprop="description" content="你是否还在一步一个脚印的在坚定走着？ 即使心烦意乱希望渺茫">
-    </span>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/25/Markdown%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="next" title="markdown常用命令">
+                  <i class="fa fa-chevron-left"></i> markdown常用命令
+                </a>
+            </div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Just Do It">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/25/Markdown%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">markdown常用命令</a>
-        </h1>
+            <span class="post-nav-divider"></span>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-25 15:43:13" itemprop="dateCreated datePublished" datetime="2019-11-25T15:43:13+08:00">2019-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-28 18:17:04" itemprop="dateModified" datetime="2019-11-28T18:17:04+08:00">2019-11-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index">
-                    <span itemprop="name">常用命令</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>例子：<a href="http://wolfcoming.github.io">我的主页</a></p>
-<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">实例代码</span><br></pre></td></tr></table></figure>
-
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>例子：</p>
-<blockquote>
-<p>中午不睡下午崩溃   —孔子</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/11/28/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="prev" title="hexo常用命令">
+                  hexo常用命令 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
       </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://wolfcoming.github.io/2019/11/25/hexo%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yq">
-      <meta itemprop="description" content="你是否还在一步一个脚印的在坚定走着？ 即使心烦意乱希望渺茫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Just Do It">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/25/hexo%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">hexo配置</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-25 15:25:47" itemprop="dateCreated datePublished" datetime="2019-11-25T15:25:47+08:00">2019-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-28 18:17:04" itemprop="dateModified" datetime="2019-11-28T18:17:04+08:00">2019-11-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo使用</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
     
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2019/11/25/hexo%E9%85%8D%E7%BD%AE/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/25/hexo%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><strong>这里我选择使用next作为主题</strong> <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener"><em>gitHub地址</em></a><br>1.下载代码</p>
-<ul>
-<li><p>方式一：通过git下载</p>
-<pre><code>cd [站点文件夹]
-git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre></li>
-<li><p>方式二：将github中代码复制到themes文件夹下面即可</p>
-</li>
-</ul>
-<p>2.修改根目录下_config.yml配置文件即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-next-7.5.0</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置分类"><a href="#设置分类" class="headerlink" title="设置分类"></a>设置分类</h3><p>1.创建“分类”选项页</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<p>2.打开source/categories/index.md,添加type: “categories”到内容中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2019-11-25 15:12:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-
-<p>3.给文章添加“categories”属性</p>
-<p>打开之前存在的文章添加categories: 属性即可完成分类功能</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">layout: markdown</span><br><span class="line">title: 常用命令</span><br><span class="line">date: 2019-11-25 15:43:13</span><br><span class="line">categories: </span><br><span class="line">- 常用命令</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h3 id="添加Tag"><a href="#添加Tag" class="headerlink" title="添加Tag"></a>添加Tag</h3><p>1.创建“标签”选项页</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-
-<p>2.打开source/tags/index.md，添加type: “tags”到内容中，添加后如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2019-11-25 15:59:19</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>3.给文章添加“tags”属性<br>打开需要添加标签的文章，为其添加tags属性。下方的tags:下方的- jQuery - 表格<br>              - 表单验证就是这篇文章的标签了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">categories: </span><br><span class="line">- 常用命令</span><br><span class="line">tags:</span><br><span class="line">- hexo</span><br><span class="line">- 常用命令</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h3 id="开启浏览量访问"><a href="#开启浏览量访问" class="headerlink" title="开启浏览量访问"></a>开启浏览量访问</h3><p>(这里只针对next主题而言，其他主题可能需要其他的一些配置)<br>在themes/_config.yml中开启busuanzi统计功能即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
-
-<h3 id="开通评论功能"><a href="#开通评论功能" class="headerlink" title="开通评论功能"></a>开通评论功能</h3><p>使用Valine 评论系统：这款系统不需要登录便可以登录，没有后端，Next 主题最新已经支持安装<br>建议使用最新版next</p>
-<p>1.在themes/_config.yml的配置文件中开启valine功能</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https://leancloud.cn</span><br><span class="line"># more info please open https://valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否开启</span><br><span class="line">  appid:   # 需要去leanclod官网创建应用</span><br><span class="line">  appkey:  # 需要去leanclod官网创建应用</span><br><span class="line">  notify: false # 新留言是否需要通知 https://github.com/xCss/Valine/wiki</span><br><span class="line">  verify: false # 是否需要验证，验证比较反人类建议false关闭</span><br><span class="line">  placeholder: 请在此输入您的留言 # 默认留言框内的文字</span><br><span class="line">  avatar: mm # 默认头像</span><br><span class="line">  guest_info: nick,mail # 默认留言框的头部需要访问者输入的信息</span><br><span class="line">  pageSize: 10 # pagination size #默认单页的留言条数</span><br></pre></td></tr></table></figure>
-
-<p>其中的appid和appkey需要去官网创建应用获得，地址如下：</p>
-<p><a href="https://leancloud.cn/dashboard/login.html#/signin" target="_blank" rel="noopener">LeanCloud官网登录入口</a></p>
-<p>创建应用，选择开发版，创建好之后就能获取到id和key复制到上一步即可<br>效果如下：<a href="https://wolfcoming.github.io/2019/11/25/hexo%E9%85%8D%E7%BD%AE/">效果地址</a></p>
-<p>2.关闭评论功能<br>    对于不想开启评论的文章，只需要添加comments字符设置为false即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout: markdown</span><br><span class="line">title: markdown常用命令</span><br><span class="line">date: 2019-11-25 15:43:13</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
   </article>
   
   
@@ -663,12 +377,10 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre>
 
   </div>
 
-  
-
-
 
           </div>
           
+    <div class="comments" id="comments"></div>
 
         </div>
           
@@ -693,6 +405,7 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#dio框架的使用"><span class="nav-number">1.</span> <span class="nav-text">dio框架的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础使用"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、同步等待"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">一、同步等待</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、异步回调"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">二、异步回调</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础配置"><span class="nav-number">1.2.2.</span> <span class="nav-text">基础配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加拦截器"><span class="nav-number">1.3.</span> <span class="nav-text">添加拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#日志拦截器"><span class="nav-number">1.3.1.</span> <span class="nav-text">日志拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#配置"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求代码："><span class="nav-number">1.3.1.2.</span> <span class="nav-text">请求代码：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#日志打印"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">日志打印</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求拦截器"><span class="nav-number">1.3.2.</span> <span class="nav-text">请求拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#模拟请求数据"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">模拟请求数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主动抛出错误"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">主动抛出错误</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求加锁"><span class="nav-number">1.3.3.</span> <span class="nav-text">请求加锁</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器端测试代码："><span class="nav-number">1.3.3.1.</span> <span class="nav-text">服务器端测试代码：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dio拦截器设置"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">dio拦截器设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结果"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求操作："><span class="nav-number">1.3.3.4.</span> <span class="nav-text">请求操作：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结果是："><span class="nav-number">1.3.3.5.</span> <span class="nav-text">结果是：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#打印日志如下："><span class="nav-number">1.3.3.6.</span> <span class="nav-text">打印日志如下：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存拦截器"><span class="nav-number">1.3.4.</span> <span class="nav-text">缓存拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主要思路如下："><span class="nav-number">1.3.4.1.</span> <span class="nav-text">主要思路如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拦截器代码如下："><span class="nav-number">1.3.4.2.</span> <span class="nav-text">拦截器代码如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#flutter使用代码"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">flutter使用代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代理"><span class="nav-number">1.4.</span> <span class="nav-text">设置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面贴出获取dio的单例模式代码"><span class="nav-number">1.5.</span> <span class="nav-text">下面贴出获取dio的单例模式代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dio请求框架封装"><span class="nav-number">1.6.</span> <span class="nav-text">dio请求框架封装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#源代码如下："><span class="nav-number">1.6.1.</span> <span class="nav-text">源代码如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用："><span class="nav-number">1.6.2.</span> <span class="nav-text">使用：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
