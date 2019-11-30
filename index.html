@@ -68,7 +68,7 @@
       总文章数 5
     </nav>
     <nav>
-      总字数 <span class="post-count">7.6k</span>
+      总字数 <span class="post-count">14.4k</span>
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -163,34 +163,35 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hexo常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-dio使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/29/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hexo常用命令</a>
+      <a class="article-title" href="/2019/11/30/dio%E4%BD%BF%E7%94%A8/">dio使用</a>
     </h1>
   
 
         
-        <a href="/2019/11/29/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2019-11-29T09:33:27.945Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
+        <a href="/2019/11/30/dio%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2019-11-30T02:39:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
 </a>
         
       </header>
     <div align="center" class="post-count">
-      字数：73字 | 预计阅读时长：1分钟
+      字数：6.8k字 | 预计阅读时长：31分钟
     </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+        <h2 id="dio框架的使用"><a href="#dio框架的使用" class="headerlink" title="dio框架的使用"></a>dio框架的使用</h2><p>   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>   pubspec.yaml文件的dev_dependencies下添加dio依赖即可<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dio: ^3.0.6</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h4><p>   最基本的使用是直接创建dio对象进行网络请求，这里以get方式进行举例。</p>
+<p>   请求的方式分两种，</p>
+<h5 id="一、同步等待"><a href="#一、同步等待" class="headerlink" title="一、同步等待"></a>一、同步等待</h5><p>   这种方式需要在方法上使用async,同时使用await等待结果 让方法变成异步，代码如下：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void getData() async &#123;</span><br><span class="line">   Response response =</span><br><span class="line">       await new Dio().get(&quot;http://192.168.43.224:8000/testApi/&quot;);</span><br><span class="line">   if (response.statusCode == 200) &#123;</span><br><span class="line">     print(response.data);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="二、异步回调"><a href="#二、异步回调" class="headerlink" title="二、异步回调"></a>二、异步回调</h5>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void getData2() &#123;</span><br><span class="line">   new Dio().get(&quot;http://192.168.43.224:8000/testApi/&quot;).then((value) &#123;</span><br><span class="line">     print(&quot;请求的结果::$&#123;value&#125;&quot;);</span><br><span class="line">   &#125;).catchError((e) &#123;</span><br><span class="line">     print(e);</span><br><span class="line">   &#125;).whenComplete(() &#123;</span><br><span class="line">     print(&quot;请求完成&quot;);</span><br><span class="line">   &#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
         
       
 
@@ -199,37 +200,11 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">常用命令</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/常用命令//" class="article-tag-list-link color5">常用命令</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/29/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/30/dio%E4%BD%BF%E7%94%A8/">展开全文 >></a>
         </p>
       
 
@@ -259,34 +234,35 @@
 
 
   
-    <article id="post-生活" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hexo常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/29/%E7%94%9F%E6%B4%BB/">生活</a>
+      <a class="article-title" href="/2019/11/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hexo常用命令</a>
     </h1>
   
 
         
-        <a href="/2019/11/29/%E7%94%9F%E6%B4%BB/" class="archive-article-date">
-  	<time datetime="2019-11-29T07:51:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
+        <a href="/2019/11/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2019-11-30T02:32:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
 </a>
         
       </header>
     <div align="center" class="post-count">
-      字数：52字 | 预计阅读时长：1分钟
+      字数：73字 | 预计阅读时长：1分钟
     </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>生活让我们学会了妥协，比如不让我用markdown语法展示图片</p>
-<img src="/.io//img/aaaa.jpg">
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<p>可当我妥协了 发现图片还是不能用，我思考了一下我的命怎么这么苦<br><img src="/.io//aaaa.jpg" alt></p>
-
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+        
       
 
       
@@ -298,7 +274,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/29/%E7%94%9F%E6%B4%BB/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/30/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">展开全文 >></a>
         </p>
       
 
@@ -410,7 +386,7 @@
 
 
   
-    <article id="markdown-Markdown常用命令" class="article article-type-markdown  article-index" itemscope itemprop="blogPost">
+    <article id="post-Markdown常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -434,7 +410,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>例子：<a href="http://wolfcoming.github.io">我的主页</a></p>
-<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">实例代码</span><br></pre></td></tr></table></figure>
+<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">实例代码11</span><br></pre></td></tr></table></figure>
         
       
 
@@ -443,29 +419,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">常用命令</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/常用命令//" class="article-tag-list-link color5">常用命令</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
         <p class="article-more-link">
@@ -682,14 +636,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">常用命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">hexo</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
