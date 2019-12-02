@@ -58,9 +58,11 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/index.html">随笔</a></li>
+				<li><a href="/categories/index.html">分类</a></li>
 	        
 				<li><a href="/archives/index.html">归档</a></li>
+	        
+				<li><a href="/categories">categories</a></li>
 	        
 			</ul>
 		</nav>
@@ -68,7 +70,7 @@
       总文章数 4
     </nav>
     <nav>
-      总字数 <span class="post-count">7.6k</span>
+      总字数 <span class="post-count">9.2k</span>
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -126,6 +128,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -142,11 +146,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/index.html">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/index.html">分类</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">categories</a></li>
 		        
 				</ul>
 			</nav>
@@ -187,10 +193,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
         
       
 
@@ -200,6 +203,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/hexo使用//" class="article-tag-list-link color2">hexo使用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -251,17 +265,20 @@
         
       </header>
     <div align="center" class="post-count">
-      字数：6.8k字 | 预计阅读时长：31分钟
+      字数：8.1k字 | 预计阅读时长：39分钟
     </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="dio框架的使用"><a href="#dio框架的使用" class="headerlink" title="dio框架的使用"></a>dio框架的使用</h2><p>   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>   pubspec.yaml文件的dev_dependencies下添加dio依赖即可<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dio: ^3.0.6</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h4><p>   最基本的使用是直接创建dio对象进行网络请求，这里以get方式进行举例。</p>
-<p>   请求的方式分两种，</p>
-<h5 id="一、同步等待"><a href="#一、同步等待" class="headerlink" title="一、同步等待"></a>一、同步等待</h5><p>   这种方式需要在方法上使用async,同时使用await等待结果 让方法变成异步，代码如下：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void getData() async &#123;</span><br><span class="line">   Response response =</span><br><span class="line">       await new Dio().get(&quot;http://192.168.43.224:8000/testApi/&quot;);</span><br><span class="line">   if (response.statusCode == 200) &#123;</span><br><span class="line">     print(response.data);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<h5 id="二、异步回调"><a href="#二、异步回调" class="headerlink" title="二、异步回调"></a>二、异步回调</h5>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void getData2() &#123;</span><br><span class="line">   new Dio().get(&quot;http://192.168.43.224:8000/testApi/&quot;).then((value) &#123;</span><br><span class="line">     print(&quot;请求的结果::$&#123;value&#125;&quot;);</span><br><span class="line">   &#125;).catchError((e) &#123;</span><br><span class="line">     print(e);</span><br><span class="line">   &#125;).whenComplete(() &#123;</span><br><span class="line">     print(&quot;请求完成&quot;);</span><br><span class="line">   &#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+        <!--
+<div align=center width=100%>
+      <img width=90% height=400 src="/img/dio进阶使用/net.jpg" >
+    </div>
+
+    ![](../img/dio进阶使用/net.jpg) 
+-->
+
+<h2 id="dio框架的使用"><a href="#dio框架的使用" class="headerlink" title="dio框架的使用"></a>dio框架的使用</h2><p>   flutter中dio网络框架使用是最为广泛的，今天来学习一下该框架。其中包括基础的配置（超时时间，默认请求头等），拦截器的设置，缓存的处理，<br>   在最后进行dio封装方便咋项目中使用。</p>
         
       
 
@@ -333,13 +350,18 @@
         
       </header>
     <div align="center" class="post-count">
-      字数：32字 | 预计阅读时长：1分钟
+      字数：44字 | 预计阅读时长：1分钟
     </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>例子：<a href="http://wolfcoming.github.io">我的主页</a></p>
-<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">实例代码11</span><br></pre></td></tr></table></figure>
+<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">实例代码11</span></pre></td></tr></table></figure>
+
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>例子：</p>
+<blockquote>
+<p>中午不睡下午崩溃   —孔子</p>
+</blockquote>
         
       
 
@@ -349,6 +371,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -400,27 +433,17 @@
         
       </header>
     <div align="center" class="post-count">
-      字数：669字 | 预计阅读时长：2分钟
+      字数：985字 | 预计阅读时长：4分钟
     </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><strong>这里我选择使用next作为主题</strong> <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener"><em>gitHub地址</em></a><br>1.下载代码</p>
-<ul>
-<li><p>方式一：通过git下载</p>
-<pre><code>cd [站点文件夹]
-git clone https://github.com/theme-next/hexo-theme-next themes/next</code></pre></li>
-<li><p>方式二：将github中代码复制到themes文件夹下面即可</p>
-</li>
-</ul>
+        <h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><strong>这里我选择使用next作为主题</strong> <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener"><em>gitHub地址</em></a><br>1.下载代码<br>方式一：通过git下载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cd [站点文件夹]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span></pre></td></tr></table></figure>
+
+<p>方式二：将github中代码复制到themes文件夹下面即可</p>
 <p>2.修改根目录下_config.yml配置文件即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-next-7.5.0</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置分类"><a href="#设置分类" class="headerlink" title="设置分类"></a>设置分类</h3><p>1.创建“分类”选项页</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<p>2.打开source/categories/index.md,添加type: “categories”到内容中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2019-11-25 15:12:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-next-7.5.0</span></pre></td></tr></table></figure>
         
       
 
@@ -615,27 +638,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>暂无友链</a>
             </li>
           
         </ul>

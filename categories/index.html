@@ -59,9 +59,11 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/index.html">随笔</a></li>
+				<li><a href="/categories/index.html">分类</a></li>
 	        
 				<li><a href="/archives/index.html">归档</a></li>
+	        
+				<li><a href="/categories">categories</a></li>
 	        
 			</ul>
 		</nav>
@@ -69,7 +71,7 @@
       总文章数 4
     </nav>
     <nav>
-      总字数 <span class="post-count">7.6k</span>
+      总字数 <span class="post-count">9.2k</span>
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -127,6 +129,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -143,11 +147,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/index.html">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/index.html">分类</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">categories</a></li>
 		        
 				</ul>
 			</nav>
@@ -320,6 +326,24 @@
 
 
 
+  
+   <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+    av: AV,
+    el: '#vcomment',
+    notify: notify,
+    app_id: "Qml8edJbyyiAzBjGYI1rGs6d-gzGzoHsz",
+    app_key: "8EBvJwxFegW3BtSJdeqf36Lw",
+    placeholder: "有话要说？",
+    avatar:"",
+  });
+</script>
 
 
   
@@ -333,26 +357,8 @@
   
 
   
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzc1Ny8yNDI1NA==">
-  <script type="text/javascript">
-    (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
 
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-
-
+  
 
 
 
@@ -494,27 +500,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>暂无友链</a>
             </li>
           
         </ul>
